@@ -12,6 +12,12 @@
 
 ### Technologies I used
 
+## Tech Stack:
+
+- [Privy Wallets](https://docs.privy.io/guide/server/wallets/new-user#pregenerating-an-embedded-wallet-for-new-users): Facilitate bets and payouts with easy log in!
+- [Farcaster API](https://docs.privy.io/reference/sdk/react-auth/interfaces/PrivyEvents#onoauthtokengrant) or Social Platform Scopes: Pull social data for the prediction
+events.
+
 **Text to Image with LLM Mint**
 
 We implemented a system where each LLM can be minted as an NFT, allowing NFT holders to access text-to-image prompt capabilities. The text-to-image generation is powered by Hyperbolic, a decentralized GPU network, ensuring robust, distributed processing for high-quality image creation. The generated images are stored securely on Storacha by Protocol Labs, ensuring decentralized and reliable storage. Each image is then minted as a unique NFT, creating a seamless ecosystem where users can generate, store, and own digital content with blockchain-backed authenticity and provenance.
