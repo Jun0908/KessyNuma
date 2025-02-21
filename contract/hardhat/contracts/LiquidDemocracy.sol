@@ -81,3 +81,4 @@ contract LiquidDemocracy {
         emit VotesReset(msg.sender);
     }
 }
+
