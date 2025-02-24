@@ -39,14 +39,14 @@ We implemented a system where each LLM can be minted as an NFT, allowing NFT hol
 | contract                   |                                                                                                                   contract address |
 | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------: |
 | Ethereum Sepolia    | [0x74cf78c3f04b64ebaa6750a68eab89335b10c3fe](https://etherscan.io/address/0x74cf78c3f04b64ebaa6750a68eab89335b10c3fe)|
-| Base Testnet   | [0x1440a247071edde7e1016b18126163d805f98c31](https://sepolia.scrollscan.com/address/0x1440a247071edde7e1016b18126163d805f98c31)|
+| Base Testnet   | [0x1440A247071EDdE7e1016b18126163D805f98C31](https://sepolia.basescan.org/address/0x1440a247071edde7e1016b18126163d805f98c31)|
 
 **Whitelist.sol Contracts**
 
 | contract                   |                                                                                                                   contract address |
 | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------: |
 | Ethereum Sepolia    | [0x934061130559f53ff6b57f5e54884d1245e09f41](https://sepolia.etherscan.io/address/0x934061130559f53ff6b57f5e54884d1245e09f41)|
-| Base Testnet    | [0xbdf24996cb511ef7827063563d3bdd3053e51a790daefb024b53da882487e393](https://testnet.bkcscan.com/tx/0xbdf24996cb511ef7827063563d3bdd3053e51a790daefb024b53da882487e393)|
+| Base Testnet    | [0x1440a247071edde7e1016b18126163d805f98c31](https://testnet.bkcscan.com/tx/0xbdf24996cb511ef7827063563d3bdd3053e51a790daefb024b53da882487e393)|
 
 
 
