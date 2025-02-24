@@ -38,9 +38,11 @@ The application will be available at `http://localhost:3000`.
 
 Ensure that you have an `env.sample` file in the root directory with the necessary environment variables.
 
-[Privy API Documentation](https://nextjs.org/docs/basic-features/environment-variables)
-[ALCHEMY_APIs Documentation](https://nextjs.org/docs/basic-features/environment-variables)
-[OPENAI_API Documentation](https://nextjs.org/docs/basic-features/environment-variables)
+[Privy API Documentation](https://privy.id/api-suite)
+
+[ALCHEMY_APIs Documentation](https://www.alchemy.com/)
+
+[OPENAI_API Documentation](https://platform.openai.com/)
 
 Example:
 
