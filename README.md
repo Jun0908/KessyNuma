@@ -10,12 +10,14 @@
 
 
 
-### Technologies I used
 
-## Tech Stack:
 
-- [Privy Wallets](https://docs.privy.io/guide/server/wallets/new-user#pregenerating-an-embedded-wallet-for-new-users): Facilitate bets and payouts with easy log in!
-- [Farcaster API](https://docs.privy.io/reference/sdk/react-auth/interfaces/PrivyEvents#onoauthtokengrant) or Social Platform Scopes: Pull social data for the prediction
+### Tech Stack:
+
+- [Privy Wallets](https://github.com/Jun0908/KessyNuma/tree/main/frontend/privy): 
+
+- [Farcaster API](https://github.com/Jun0908/KessyNuma/tree/main/api/Farcaster) 
+
 events.
 
 **Text to Image with LLM Mint**
@@ -26,18 +28,18 @@ We implemented a system where each LLM can be minted as an NFT, allowing NFT hol
 
 ### Development
 
-**PredictionMarket.sol.sol Contracts**
+**PredictionMarket.sol Contracts**
 
 | contract                   |                                                                                                                   contract address |
 | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------: |
-| Ethereum Sepolia    | [0xd644eeb2217d02f167e8865fff55079fc140e971](https://sepolia.etherscan.io/address/0xd644eeb2217d02f167e8865fff55079fc140e971)|
+| Ethereum Sepolia    | [0xd644eeb2217d02f167e8865fff55079fc140e971](https://etherscan.io/address/0x208f38670a2ef67e6c0a6579a10191fbd7a1b535)|
 | Base Testnet   | [0xe2a548dacdbc942d659a523fd40335000c80064c](https://sepolia.scrollscan.com/address/0xe2a548dacdbc942d659a523fd40335000c80064c)|
 
-**SendToken.sol Contracts**
+**LiquidDemocracy.sol Contracts**
 
 | contract                   |                                                                                                                   contract address |
 | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------: |
-| Ethereum Sepolia    | [0x93abb166684852043b3884474853a726b1295469](https://sepolia.etherscan.io/address/0x93abb166684852043b3884474853a726b1295469)|
+| Ethereum Sepolia    | [0x74cf78c3f04b64ebaa6750a68eab89335b10c3fe](https://etherscan.io/address/0x74cf78c3f04b64ebaa6750a68eab89335b10c3fe)|
 | Base Testnet   | [0x1440a247071edde7e1016b18126163d805f98c31](https://sepolia.scrollscan.com/address/0x1440a247071edde7e1016b18126163d805f98c31)|
 
 **Whitelist.sol Contracts**
@@ -60,9 +62,9 @@ We would like to create **the society with decentralized value** by increasing *
 
 | Title          |                                                              URL |
 | :------------- | ---------------------------------------------------------------: |
-| Demo Movie      |                                      [Nudibranch-demo](https://youtu.be/agQj5_Lpucc)|
-| Pitch Doc    |   [Nudibranch-presentation](https://www.canva.com/design/DAGVtA0iy08/Sz0p5ehf7WcXCwoIdE_ZVg/edit?utm_content=DAGVtA0iy08&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) |
-| Demo Site     |                                 [Nudibranch-demo](https://tpfsg35rib.ap-northeast-1.awsapprunner.com/evaluate-1)| 
+| Demo Movie      |                                      [KessyNuma-demo](https://youtu.be/agQj5_Lpucc)|
+| Pitch Doc    |   [KessyNuma-presentation](https://www.canva.com/design/DAGVtA0iy08/Sz0p5ehf7WcXCwoIdE_ZVg/edit?utm_content=DAGVtA0iy08&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) |
+| Demo Site     |                                 [KessyNuma-demo](https://kessy-front.vercel.app/)| 
 
 
 ### References
