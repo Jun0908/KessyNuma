@@ -14,11 +14,10 @@
 
 ### Tech Stack:
 
-- [Privy Wallets](https://github.com/Jun0908/KessyNuma/tree/main/frontend/privy): 
+- [Privy Wallets](https://github.com/Jun0908/KessyNuma/tree/main/frontend/privy)
 
 - [Farcaster API](https://github.com/Jun0908/KessyNuma/tree/main/api/Farcaster) 
 
-events.
 
 **Text to Image with LLM Mint**
 
