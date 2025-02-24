@@ -1,0 +1,119 @@
+{
+    "characters": [
+        {
+            "id": 1,
+            "name": "Vitalik Buterin",
+            "file": "characters/vitalik.json"
+        },
+        {
+            "id": 2,
+            "name": "Gavin Wood",
+            "file": "characters/gavin.json"
+        },
+        {
+            "id": 3,
+            "name": "CZ (Changpeng Zhao)",
+            "file": "characters/cz.json"
+        },
+        {
+            "id": 4,
+            "name": "Balaji Srinivasan",
+            "file": "characters/balaji.json"
+        },
+        {
+            "id": 5,
+            "name": "Kevin Owocki",
+            "file": "characters/qwocki.json"
+        },
+        {
+            "id": 6,
+            "name": "Chris Dixon",
+            "file": "characters/dixon.json"
+        },
+        {
+            "id": 7,
+            "name": "Audrey Tang",
+            "file": "characters/audrey.json"
+        },
+        {
+            "id": 8,
+            "name": "Elon Musk",
+            "file": "characters/elon.json"
+        },
+        {
+            "id": 9,
+            "name": "Joe Biden",
+            "file": "characters/biden.json"
+        },
+        {
+            "id": 10,
+            "name": "Donald Trump",
+            "file": "characters/trump.json"
+        },
+        {
+            "id": 11,
+            "name": "Barack Obama",
+            "file": "characters/obama.json"
+        },
+        {
+            "id": 12,
+            "name": "Angela Merkel",
+            "file": "characters/merkel.json"
+        },
+        {
+            "id": 13,
+            "name": "Warren Buffett",
+            "file": "characters/buffett.json"
+        },
+        {
+            "id": 14,
+            "name": "Jeff Bezos",
+            "file": "characters/bezos.json"
+        },
+        {
+            "id": 15,
+            "name": "Bill Gates",
+            "file": "characters/gates.json"
+        },
+        {
+            "id": 16,
+            "name": "Peter Thiel",
+            "file": "characters/thiel.json"
+        },
+        {
+            "id": 17,
+            "name": "Yuval Noah Harari",
+            "file": "characters/harari.json"
+        },
+        {
+            "id": 18,
+            "name": "Edward Snowden",
+            "file": "characters/snowden.json"
+        },
+        {
+            "id": 19,
+            "name": "Julian Assange",
+            "file": "characters/assange.json"
+        },
+        {
+            "id": 20,
+            "name": "Stephen Hawking",
+            "file": "characters/hawking.json"
+        },
+        {
+            "id": 21,
+            "name": "Michio Kaku",
+            "file": "characters/kaku.json"
+        },
+        {
+            "id": 22,
+            "name": "Sam Altman",
+            "file": "characters/altman.json"
+        },
+        {
+            "id": 23,
+            "name": "Demis Hassabis",
+            "file": "characters/hassabis.json"
+        }
+    ]
+}
