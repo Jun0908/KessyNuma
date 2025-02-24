@@ -31,25 +31,21 @@ We implemented a system where each LLM can be minted as an NFT, allowing NFT hol
 | contract                   |                                                                                                                   contract address |
 | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------: |
 | Ethereum Sepolia    | [0xd644eeb2217d02f167e8865fff55079fc140e971](https://sepolia.etherscan.io/address/0xd644eeb2217d02f167e8865fff55079fc140e971)|
-| Scroll Testnet   | [0xe2a548dacdbc942d659a523fd40335000c80064c](https://sepolia.scrollscan.com/address/0xe2a548dacdbc942d659a523fd40335000c80064c)|
+| Base Testnet   | [0xe2a548dacdbc942d659a523fd40335000c80064c](https://sepolia.scrollscan.com/address/0xe2a548dacdbc942d659a523fd40335000c80064c)|
 
 **SendToken.sol Contracts**
 
 | contract                   |                                                                                                                   contract address |
 | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------: |
 | Ethereum Sepolia    | [0x93abb166684852043b3884474853a726b1295469](https://sepolia.etherscan.io/address/0x93abb166684852043b3884474853a726b1295469)|
-| Bitkub Testnet    | [0x0981fa48b9efe3f9e1fe878ba826c56b7ffd2d624ec252ea7d165f8e34f6a936](https://testnet.bkcscan.com/tx/0x0981fa48b9efe3f9e1fe878ba826c56b7ffd2d624ec252ea7d165f8e34f6a936)|
-| Flare Testnet   | [0x677ab31a9d777eedbc88ce2198dce8de9378e78f](https://explorer.testnet.rootstock.io/address/0x677ab31a9d777eedbc88ce2198dce8de9378e78f?__ctab=general )|
-| Flow Testnet    | [0x13793c1dfcaf3ae378932b23f7972e722c5af93b371e3a1134d6dbaad2bf8d08](https://evm-testnet.flowscan.io/tx/0x13793c1dfcaf3ae378932b23f7972e722c5af93b371e3a1134d6dbaad2bf8d08)
-| Polygon Testnet   | [0xbbd4beabcc11b33f585a0de8fd30c20781c26850f7f67097a74e20d5f79b6219](https://www.oklink.com/amoy/tx/0xbbd4beabcc11b33f585a0de8fd30c20781c26850f7f67097a74e20d5f79b6219)|
-| Scroll Testnet   | [0x1440a247071edde7e1016b18126163d805f98c31](https://sepolia.scrollscan.com/address/0x1440a247071edde7e1016b18126163d805f98c31)|
+| Base Testnet   | [0x1440a247071edde7e1016b18126163d805f98c31](https://sepolia.scrollscan.com/address/0x1440a247071edde7e1016b18126163d805f98c31)|
 
 **Whitelist.sol Contracts**
 
 | contract                   |                                                                                                                   contract address |
 | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------: |
 | Ethereum Sepolia    | [0x934061130559f53ff6b57f5e54884d1245e09f41](https://sepolia.etherscan.io/address/0x934061130559f53ff6b57f5e54884d1245e09f41)|
-| Bitkub Testnet    | [0xbdf24996cb511ef7827063563d3bdd3053e51a790daefb024b53da882487e393](https://testnet.bkcscan.com/tx/0xbdf24996cb511ef7827063563d3bdd3053e51a790daefb024b53da882487e393)|
+| Base Testnet    | [0xbdf24996cb511ef7827063563d3bdd3053e51a790daefb024b53da882487e393](https://testnet.bkcscan.com/tx/0xbdf24996cb511ef7827063563d3bdd3053e51a790daefb024b53da882487e393)|
 
 
 
