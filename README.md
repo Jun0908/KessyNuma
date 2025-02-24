@@ -39,7 +39,7 @@ We implemented a system where each LLM can be minted as an NFT, allowing NFT hol
 | contract                   |                                                                                                                   contract address |
 | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------: |
 | Ethereum Sepolia    | [0x74cf78c3f04b64ebaa6750a68eab89335b10c3fe](https://etherscan.io/address/0x74cf78c3f04b64ebaa6750a68eab89335b10c3fe)|
-| Base Testnet   | [0x1440A247071EDdE7e1016b18126163D805f98C31](https://sepolia.basescan.org/address/0x1440a247071edde7e1016b18126163d805f98c31)|
+| Base Testnet   | [0x89e0a255c7f70250fcad3dba5954a90a169b4983](https://sepolia.basescan.org/address/0x1440a247071edde7e1016b18126163d805f98c31)|
 
 **Whitelist.sol Contracts**
 
