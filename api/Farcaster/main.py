@@ -4,7 +4,6 @@ import json
 import openai
 import re
 import traceback
-from pprint import pprint
 
 # APIキー
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -20,6 +19,7 @@ FARCASTER_POSTS_API = "https://api.pinata.cloud/v3/farcaster/casts?fid={}&limit=
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 def fetch_fid(username):
+    """ユーザー名からFIDを取得"""
     url = FNAME_API.format(username)
     print(f"🔍 Fetching FID for username: {username}")
     try:
@@ -32,6 +32,7 @@ def fetch_fid(username):
         return None
 
 def fetch_posts(fid):
+    """FIDから投稿とバイオを取得"""
     url = FARCASTER_POSTS_API.format(fid)
     headers = {"accept": "application/json", "authorization": f"Bearer {PINATA_JWT}"}
     print(f"🔍 Fetching posts for FID: {fid}")
@@ -54,23 +55,54 @@ def fetch_posts(fid):
         return "No bio available.", ["No posts available."]
 
 def generate_json_profile(username, bio, posts):
+    """JSONプロフィールを生成"""
     print(f"🔍 Generating JSON profile for: {username}")
     
     prompt = f"""
     You are an AI assistant that generates structured JSON profiles based on user activity.
+
+    **Rules:**
+    - **MUST return JSON output ONLY** (no explanations or additional text).
+    - **Infer user attributes even if data is limited**.
+    - **Do not return \"Unknown\". Provide the best reasonable guess**.
+
+    ---
     
     **User Data**
     - **Name:** {username}
     - **Bio:** {bio}
     - **Recent Posts:** {', '.join(posts)}
-    
-    **Rules:**
-    - Extract knowledge areas based on bio and posts.
-    - Identify topics of interest based on user activity.
-    - Infer communication style and adjectives describing the user's personality.
-    - **MUST return JSON output ONLY** (no explanations or additional text).
+
+    ---
     
     **Output Format (JSON)**
+    ```json
+    {{
+        "profile": {{
+            "fullName": "{username}",
+            "bio": "{bio}",
+            "posts": {json.dumps(posts)},
+
+            "knowledge": [
+                "Extracted from bio and posts"
+            ],
+            "topics": [
+                "Identified from user activity"
+            ],
+            "style": {{
+                "all": ["General communication style"],
+                "chat": ["How the user interacts in conversations"],
+                "post": ["How the user writes posts"]
+            }},
+            "adjectives": [
+                "Words describing the user's personality"
+            ],
+            "catchphrases": [
+                "User's common expressions or phrases"
+            ]
+        }}
+    }}
+    ```
     """
     
     try:
@@ -90,20 +122,23 @@ def generate_json_profile(username, bio, posts):
         print(traceback.format_exc())
         return
     
-    json_filename = f"{username}_profile.json"
+    json_filename = f"{username}.json"
     with open(json_filename, "w", encoding="utf-8") as json_file:
         json.dump(json_output, json_file, indent=4, ensure_ascii=False)
     
     print(f"✅ JSON profile saved as {json_filename}")
 
 def main():
-    username = "rz"
-    fid = fetch_fid(username)
-    if fid:
-        bio, posts = fetch_posts(fid)
-        generate_json_profile(username, bio, posts)
-    else:
-        print(f"❌ Could not retrieve FID for username: {username}")
+    """複数のユーザーのプロフィールを生成"""
+    usernames = ["hikalipikali"]  # ここに追加したいユーザー名をリストに入れる
+
+    for username in usernames:
+        fid = fetch_fid(username)
+        if fid:
+            bio, posts = fetch_posts(fid)
+            generate_json_profile(username, bio, posts)
+        else:
+            print(f"❌ Could not retrieve FID for username: {username}")
 
 if __name__ == "__main__":
     main()
