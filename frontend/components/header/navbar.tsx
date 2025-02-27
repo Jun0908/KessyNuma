@@ -30,6 +30,7 @@ function Navbar() {
     justifyContent: "flex-start", // left-align
     flex: 1,
     marginLeft: "4em",
+    marginRight: "1em",
     gap: "1em", // adds spacing between links
   };
 

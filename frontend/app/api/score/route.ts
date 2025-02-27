@@ -1,4 +1,3 @@
-// API: pages/api/score.ts
 import { NextResponse } from "next/server";
 import { Configuration, OpenAIApi } from "openai";
 import { promises as fs } from "fs";
@@ -10,12 +9,16 @@ const openai = new OpenAIApi(configuration);
 
 export async function POST(req: Request): Promise<NextResponse> {
   try {
-    const characterData = JSON.parse(
-      await fs.readFile("./data/characters/trump.json", "utf-8")
-    );
-
     const body = await req.json();
-    const { messages } = body;
+    const { messages, character } = body;
+
+    if (!character) {
+      return new NextResponse("Character is required", { status: 400 });
+    }
+
+    const characterData = JSON.parse(
+      await fs.readFile(`./data/characters/${character}.json`, "utf-8")
+    );
 
     const characterPrompt = `
       You are ${characterData.name}. 
@@ -36,10 +39,7 @@ export async function POST(req: Request): Promise<NextResponse> {
 
     const response = await openai.createChatCompletion({
       model: "gpt-4-turbo",
-      messages: [
-        { role: "system", content: characterPrompt },
-        ...messages,
-      ],
+      messages: [{ role: "system", content: characterPrompt }, ...messages],
     });
 
     const responseMessage = response.data.choices[0]?.message?.content;
@@ -50,7 +50,6 @@ export async function POST(req: Request): Promise<NextResponse> {
     const scoreLabels = ["Relevance", "Creativity", "Coherence", "Engagement", "Accuracy"];
 
     const scoreData = scoreLabels.map((label, index) => ({ label, score: scores[index] || 0 }));
-
     const feedback = responseMessage.split("\n").slice(-1)[0];
 
     return NextResponse.json({ scores: scoreData, feedback });

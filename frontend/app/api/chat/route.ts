@@ -13,28 +13,26 @@ const openai = new OpenAIApi(configuration);
 // メイン処理
 export async function POST(req: Request): Promise<NextResponse> {
   try {
+    const body = await req.json();
+    // body から "character" を取得し、指定がなければ "trump" をデフォルトに
+    const { messages, character = "trump" } = body;
+
+    // キャラクターファイルのパスを動的に決定
+    const characterFilePath = `./data/characters/${character}.json`;
+
     // JSONファイルの読み込み
     const characterData = JSON.parse(
-      await fs.readFile("./data/characters/trump.json", "utf-8")
+      await fs.readFile(characterFilePath, "utf-8")
     );
 
-    const body = await req.json();
-    const { messages } = body;
-
     // キャラクター設定用のプロンプト
-    const characterPrompt = `
-      You are ${characterData.name}. 
-      You focus on the following topics: ${characterData.topics.join(", ")}.
-      Your knowledge includes: ${characterData.knowledge.join(", ")}.
-      Your communication style involves: ${characterData.style.all.join(", ")}.
-      Your speech often includes adjectives such as: ${characterData.adjectives.join(", ")}.
-    `;
+    const characterPrompt = `\n      You are ${characterData.name}.\n      You focus on the following topics: ${characterData.topics.join(", ")}.\n      Your knowledge includes: ${characterData.knowledge.join(", ")}.\n      Your communication style involves: ${characterData.style.all.join(", ")}.\n      Your speech often includes adjectives such as: ${characterData.adjectives.join(", ")}.\n    `;
 
     // ChatGPT APIへのリクエスト
     const response = await openai.createChatCompletion({
       model: "gpt-4-turbo",
       messages: [
-        { role: "system", content: characterPrompt }, // キャラクター情報を渡す
+        { role: "system", content: characterPrompt },
         ...messages,
       ],
       functions: [
@@ -60,7 +58,6 @@ export async function POST(req: Request): Promise<NextResponse> {
     });
 
     const responseMessage = response.data.choices[0]?.message;
-
     if (!responseMessage) throw new Error("Empty response message");
 
     if (responseMessage.function_call) {
@@ -91,3 +88,4 @@ export async function POST(req: Request): Promise<NextResponse> {
     return new NextResponse("Internal Server Error", { status: 500 });
   }
 }
+

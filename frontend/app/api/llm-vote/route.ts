@@ -7,12 +7,67 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-async function getRandomCharacters() {
-  const data = JSON.parse(await fs.readFile("./data/index.json", "utf-8"));
-  const shuffled = data.characters.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, 3); // ランダムに3人選択
+/**
+ * Character data structure
+ */
+interface Character {
+  file: string;
+  name?: string;
 }
 
+interface CharacterData {
+  name: string;
+  topics: string[];
+  knowledge: string[];
+  style: string[];
+  adjectives: string[];
+}
+
+/**
+ * Select 100 random characters from index.json
+ */
+async function getRandomCharacters(): Promise<Character[]> {
+  try {
+    const data = JSON.parse(await fs.readFile("./data/index.json", "utf-8"));
+    if (!data.characters || !Array.isArray(data.characters) || data.characters.length === 0) {
+      throw new Error("Character list is empty or invalid.");
+    }
+
+    const shuffled: Character[] = data.characters.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 100); // Pick 100 random characters
+  } catch (error) {
+    console.error("Error reading index.json:", error);
+    throw new Error("Failed to load character data.");
+  }
+}
+
+/**
+ * Retrieve character data from a file
+ */
+async function getCharacterData(characterFile: string): Promise<CharacterData> {
+  try {
+    const filePath = `./data/${characterFile}`;
+    console.log(`Reading character data from: ${filePath}`);
+
+    const rawData = await fs.readFile(filePath, "utf-8");
+    const characterData = JSON.parse(rawData);
+
+    return {
+      name: characterData.name || "Unknown",
+      topics: Array.isArray(characterData.topics) ? characterData.topics : [],
+      knowledge: Array.isArray(characterData.knowledge) ? characterData.knowledge : [],
+      style: Array.isArray(characterData.style?.all) ? characterData.style.all : [],
+      adjectives: Array.isArray(characterData.adjectives) ? characterData.adjectives : [],
+    };
+  } catch (error) {
+    console.error(`Error reading character file ${characterFile}:`, error);
+    throw new Error(`Failed to load character data from ${characterFile}`);
+  }
+}
+
+/**
+ * Handles POST requests for the LLM voting system
+ */
 export async function POST(req: Request): Promise<NextResponse> {
   try {
     const body = await req.json();
@@ -22,48 +77,50 @@ export async function POST(req: Request): Promise<NextResponse> {
       return NextResponse.json({ error: "Invalid question" }, { status: 400 });
     }
 
+    // Select 100 random characters
     const selectedCharacters = await getRandomCharacters();
-    const votes = [];
 
-    for (const character of selectedCharacters) {
-      const characterData = JSON.parse(await fs.readFile(`./data/${character.file}`, "utf-8"));
-      const characterPrompt = `
-        You are ${characterData.name}. 
-        You focus on the following topics: ${characterData.topics.join(", ")}.
-        Your knowledge includes: ${characterData.knowledge.join(", ")}.
-        Your communication style involves: ${characterData.style.all.join(", ")}.
-        Your speech often includes adjectives such as: ${characterData.adjectives.join(", ")}.
-        
-        Now, analyze the following question and respond strictly with 'YES' or 'NO'.
-        Do not provide any additional explanation.
-        
-        Question: ${question}
-        Respond ONLY with 'YES' or 'NO'.
-      `;
+    // Execute LLM calls in parallel
+    const results = await Promise.all(
+      selectedCharacters.map(async (character: Character) => {
+        const characterData = await getCharacterData(character.file);
 
-      const response = await openai.createChatCompletion({
-        model: "gpt-4-turbo",
-        messages: [{ role: "system", content: characterPrompt }],
-        temperature: 0, // 回答を決定的にする
-        max_tokens: 1, // 1トークンだけに制限し、YES/NO 以外の回答を防ぐ
-      });
+        const characterPrompt = `
+          You are ${characterData.name}.
+          You focus on the following topics: ${characterData.topics.join(", ")}.
+          Your knowledge includes: ${characterData.knowledge.join(", ")}.
+          Your communication style involves: ${characterData.style.join(", ")}.
+          Your speech often includes adjectives such as: ${characterData.adjectives.join(", ")}.
+          
+          Now, analyze the following question and respond strictly with 'YES' or 'NO'.
+          Do not provide any additional explanation.
 
-      let responseMessage = response.data.choices[0]?.message?.content?.trim().toUpperCase() || "NO";
+          Question: ${question}
+          Respond ONLY with 'YES' or 'NO'.
+        `;
 
-      // YES か NO 以外の文字列が混ざっている可能性があるので、正規表現でフィルタリング
-      responseMessage = responseMessage.match(/YES|NO/) ? responseMessage : "NO";
+        const response = await openai.createChatCompletion({
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "system", content: characterPrompt }],
+          temperature: 0,
+          max_tokens: 1,
+        });
 
-      const voteType = responseMessage === "YES" ? "yes" : "no";
-      const voteValue = Math.floor(Math.random() * 10) + 1; // 投票の影響度（1~10のランダム値）
+        let responseMessage = response.data.choices[0]?.message?.content?.trim().toUpperCase() || "NO";
+        responseMessage = responseMessage.match(/YES|NO/) ? responseMessage : "NO";
 
-      votes.push({ character: characterData.name, voteType, voteValue });
-    }
+        return responseMessage === "YES" ? "yes" : "no";
+      })
+    );
 
-    return NextResponse.json({ votes });
+    // Aggregate YES/NO votes
+    let yesCount = results.filter((vote) => vote === "yes").length;
+    let noCount = results.length - yesCount;
+
+    return NextResponse.json({ yesCount, noCount });
   } catch (error: any) {
     console.error("Error in LLM vote API:", error.message);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
-
 

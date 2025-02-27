@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import SecureETHDistributorAbi from "../../contracts/SendToken.json"; // ABI のパスを調整
+import SecureETHDistributorAbi from "../../contracts/sendToken.json"; // ABI のパスを調整
 
 const CONTRACT_ADDRESS = "0x5d3c5c80aa78c5a0eee0f747188fe552f439ef08";
 const ALCHEMY_RPC_URL = process.env.NEXT_PUBLIC_ALCHEMY_API_KEY!;
