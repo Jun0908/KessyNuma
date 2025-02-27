@@ -1,4 +1,4 @@
-# kessyNuma　Public Goods Funding Simulation with AI Agents
+# kessyNuma: Public Goods Funding Simulation with AI Agents
 
 ## **Overview**  
 This project introduces a **public goods funding simulation** where **AI-generated virtual residents** participate in decision-making using **Quadratic Voting (QV)** and **a Polymarket-inspired mechanism** for municipal currency distribution. By integrating **Celestia** for data availability, this system enhances **community-driven resource allocation** and **civic engagement** in local governance.
@@ -66,10 +66,10 @@ This project proposes a **decentralized civic engagement platform** that utilize
 
 ### Tech Stack:
 
-- [Privy Wallets](https://github.com/Jun0908/KessyNuma/tree/main/frontend/privy)
+- [Privy Wallets](https://github.com/Jun0908/KessyNuma/tree/main/frontend/privy):
 Seamless wallet creation and authentication
 
-- [Farcaster API](https://github.com/Jun0908/KessyNuma/tree/main/api/Farcaster) 
+- [Farcaster API](https://github.com/Jun0908/KessyNuma/tree/main/api/Farcaster) :
 Web scraping for AI agent personality creation
 
 **Prediction System with AI Agents**
