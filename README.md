@@ -98,8 +98,8 @@ We developed a system where **AI agents generate personas** using content from t
 
 | contract                   |                                                                                                                   contract address |
 | :------------------------- | ---------------------------------------------------------------------------------------------------------------------------------: |
-| Ethereum Sepolia    | [0x934061130559f53ff6b57f5e54884d1245e09f41](https://sepolia.etherscan.io/address/0x934061130559f53ff6b57f5e54884d1245e09f41)|
-| Base Testnet    | [0x1440a247071edde7e1016b18126163d805f98c31](https://testnet.bkcscan.com/tx/0xbdf24996cb511ef7827063563d3bdd3053e51a790daefb024b53da882487e393)|
+| Ethereum Sepolia    | [0xc8f9911455eb27fc78e85e46c92ff8fe052e6a0e](https://sepolia.etherscan.io/tx/0xeb20bf493669058d2f544d509985c88cf70a4bc718d6d676ecf9a67fe43ec401)|
+| Base Testnet    | [0xe2a548dacdbc942d659a523fd40335000c80064c](https://sepolia.basescan.org/address/0xe2a548dacdbc942d659a523fd40335000c80064c)|
 
 
 
