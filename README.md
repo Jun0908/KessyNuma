@@ -107,9 +107,9 @@ Through this infrastructure, we create a trustless, efficient, and AI-enhanced p
 
 
 ### What's next for
-- Developing Advanced Voting Systems
+- **Developing Advanced Voting Systems:**
 We aim to implement innovative voting mechanisms such as Zero-Knowledge secondary voting, Pairwise Betting, Conviction Voting, and Futarchy-based governance. These approaches will enhance decision-making, privacy, and efficiency in public goods funding.
-- Enhancing AI Agent Influence on Public Discourse
+- **Enhancing AI Agent Influence on Public Discourse:**
 We will integrate AI agents into mass media and social platforms to analyze and influence civic engagement. By modeling media impact and tracking social sentiment, these agents will contribute to more informed and dynamic governance.
 
 We would like to create **the society with decentralized value** by increasing **diverse evaluation criteria**.
