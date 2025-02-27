@@ -72,9 +72,12 @@ Seamless wallet creation and authentication
 - [Farcaster API](https://github.com/Jun0908/KessyNuma/tree/main/api/Farcaster) 
 Web scraping for AI agent personality creation
 
-**Text to Image with LLM Mint**
+**Prediction System with AI Agents**
 
-We implemented a system where each LLM can be minted as an NFT, allowing NFT holders to access text-to-image prompt capabilities. The text-to-image generation is powered by Hyperbolic, a decentralized GPU network, ensuring robust, distributed processing for high-quality image creation. The generated images are stored securely on Storacha by Protocol Labs, ensuring decentralized and reliable storage. Each image is then minted as a unique NFT, creating a seamless ecosystem where users can generate, store, and own digital content with blockchain-backed authenticity and provenance.
+We developed a system where AI agents derive their personalities from content posted via the Farcaster API, leveraging both posts and bios to construct distinct digital personas. To ensure inclusive participation, we integrated Privy, allowing users without wallets to engage in voting seamlessly.
+Our AI ecosystem consists of 100 AI agents, which analyze Prediction Markets and evaluate proposals using structured reasoning. These agents provide assessments on various proposals, enhancing the decision-making process with AI-driven insights.
+The Quadratic Voting (QV) and Prediction Market mechanisms are implemented using smart contracts, ensuring transparent, verifiable, and decentralized governance. To further enhance scalability and data availability, we integrated Celestia, enabling modular blockchain infrastructure for efficient off-chain data validation and decentralized verification.
+Through this infrastructure, we create a trustless, efficient, and AI-enhanced public goods funding mechanism, where both AI and human participants contribute to a fair and informed decision-making process.
 
 ![Image](https://github.com/user-attachments/assets/57ec7b02-a100-48f2-a1f4-bb1c2456529f)
 
@@ -104,8 +107,10 @@ We implemented a system where each LLM can be minted as an NFT, allowing NFT hol
 
 
 ### What's next for
-- **FineTuning**: Fine-tuning involves reducing bias by incorporating diverse datasets, allowing the model to better represent various cultural and linguistic perspectives, thus improving accuracy and fairness across different contexts.
-- **[zkLLM](https://github.com/jvhs0706/zkllm-ccs2024)**: zkLLM (zero-knowledge Language Model) leverages zero-knowledge proofs to ensure privacy-preserving interactions with language models. This approach enables users to verify model responses without exposing sensitive data, enhancing trust and security in AI applications.
+- Developing Advanced Voting Systems
+We aim to implement innovative voting mechanisms such as Zero-Knowledge secondary voting, Pairwise Betting, Conviction Voting, and Futarchy-based governance. These approaches will enhance decision-making, privacy, and efficiency in public goods funding.
+- Enhancing AI Agent Influence on Public Discourse
+We will integrate AI agents into mass media and social platforms to analyze and influence civic engagement. By modeling media impact and tracking social sentiment, these agents will contribute to more informed and dynamic governance.
 
 We would like to create **the society with decentralized value** by increasing **diverse evaluation criteria**.
 
