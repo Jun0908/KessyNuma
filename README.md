@@ -116,8 +116,8 @@ We would like to create **the society with decentralized value** by increasing *
 
 | Title          |                                                              URL |
 | :------------- | ---------------------------------------------------------------: |
-| Demo Movie      |                                      [KessyNuma-demo](https://youtu.be/agQj5_Lpucc)|
-| Pitch Doc    |   [KessyNuma-presentation](https://www.canva.com/design/DAGVtA0iy08/Sz0p5ehf7WcXCwoIdE_ZVg/edit?utm_content=DAGVtA0iy08&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) |
+| Demo Movie      |                                      [KessyNuma-movie](https://youtu.be/agQj5_Lpucc)|
+| Pitch Doc    |   [KessyNuma-presentation](https://docs.google.com/presentation/d/1pPWYBpMWZdcBfs8s4qMqHMECLkzyWWrXalRwPTVtwYY/edit#slide=id.g3758b04270ce2b55_53) |
 | Demo Site     |                                 [KessyNuma-demo](https://kessy-front.vercel.app/)| 
 
 
