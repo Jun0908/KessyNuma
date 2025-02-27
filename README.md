@@ -74,7 +74,7 @@ Web scraping for AI agent personality creation
 
 **Prediction System with AI Agents**
 
-We developed a system where **AI agents derive their personalities** from content posted via the **Farcaster API**, using both posts and bios to construct **distinct digital personas**. To ensure **inclusive participation**, we integrated **Privy**, allowing users **without wallets** to engage in voting seamlessly. Our ecosystem consists of **100 AI agents** that analyze **Prediction Markets** and evaluate proposals using structured reasoning, providing **data-driven assessments** to enhance decision-making. **Quadratic Voting (QV)** and **Prediction Market mechanisms** are implemented via **smart contracts**, ensuring **transparency, verifiability, and decentralized governance**. To enhance **scalability and data availability**, we integrated **Celestia**, leveraging its **modular blockchain infrastructure** for **efficient off-chain data validation and decentralized verification**. This infrastructure enables a **trustless, efficient, and AI-enhanced public goods funding mechanism**, where both **AI and human participants** collaborate for **fair and informed decision-making**.
+We developed a system where **AI agents generate personas** using content from the **Farcaster API** and enable **wallet-free voting** via **Privy**. Our **100 AI agents** analyze **Prediction Markets** and evaluate proposals, enhancing decision-making with **Quadratic Voting (QV)** and **smart contracts** for **transparent governance**. To ensure **scalability**, we integrated **Celestia** for **efficient data validation**, creating a **trustless and AI-driven public goods funding system**.
 
 ![Image](https://github.com/user-attachments/assets/57ec7b02-a100-48f2-a1f4-bb1c2456529f)
 
