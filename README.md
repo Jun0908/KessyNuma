@@ -1,4 +1,4 @@
-# kessyNuma　# **Public Goods Funding Simulation with AI Agents
+# kessyNuma　Public Goods Funding Simulation with AI Agents
 
 ## **Overview**  
 This project introduces a **public goods funding simulation** where **AI-generated virtual residents** participate in decision-making using **Quadratic Voting (QV)** and **a Polymarket-inspired mechanism** for municipal currency distribution. By integrating **Celestia** for data availability, this system enhances **community-driven resource allocation** and **civic engagement** in local governance.
@@ -64,21 +64,19 @@ This project proposes a **decentralized civic engagement platform** that utilize
 ---
 
 
-
-
-
 ### Tech Stack:
 
 - [Privy Wallets](https://github.com/Jun0908/KessyNuma/tree/main/frontend/privy)
+Seamless wallet creation and authentication
 
 - [Farcaster API](https://github.com/Jun0908/KessyNuma/tree/main/api/Farcaster) 
-
+Web scraping for AI agent personality creation
 
 **Text to Image with LLM Mint**
 
 We implemented a system where each LLM can be minted as an NFT, allowing NFT holders to access text-to-image prompt capabilities. The text-to-image generation is powered by Hyperbolic, a decentralized GPU network, ensuring robust, distributed processing for high-quality image creation. The generated images are stored securely on Storacha by Protocol Labs, ensuring decentralized and reliable storage. Each image is then minted as a unique NFT, creating a seamless ecosystem where users can generate, store, and own digital content with blockchain-backed authenticity and provenance.
 
-<img width="624" alt="スクリーンショット 2024-11-17 0 15 25" src="https://github.com/user-attachments/assets/ed41036b-ffa2-4004-9726-34a5291e264d">
+![Image](https://github.com/user-attachments/assets/57ec7b02-a100-48f2-a1f4-bb1c2456529f)
 
 ### Development
 
