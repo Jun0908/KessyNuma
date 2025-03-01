@@ -69,7 +69,7 @@ This project proposes a **decentralized civic engagement platform** that utilize
 - [Privy Wallets](https://github.com/Jun0908/KessyNuma/tree/main/frontend/privy):
 Seamless wallet creation and authentication
 
-- [Farcaster API](https://github.com/Jun0908/KessyNuma/tree/main/api/Farcaster) :
+- [Farcaster API](https://github.com/Jun0908/KessyNuma/tree/main/backend/Farcaster) :
 Web scraping for AI agent personality creation
 
 **Prediction System with AI Agents**
